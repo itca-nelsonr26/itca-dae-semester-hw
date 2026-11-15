@@ -13,6 +13,7 @@ namespace tdsv121_dae_final
         public LoginForm()
         {
             InitializeComponent();
+            this.FormClosing += LoginForm_FormClosing;
             Debug.WriteLine(EnvironmentManager.GetRegistrationSecret());
         }
 
@@ -22,6 +23,11 @@ namespace tdsv121_dae_final
 
             registrationForm.Show();
             this.Hide();
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btn_login_Click(object sender, EventArgs e)

@@ -22,6 +22,11 @@ namespace tdsv121_dae_final
             this.session = session;
             lblUsuario.Text = "Bienvenido, " + session.GetUserName();
             // Llamamos al método para cargar la tabla al abrir el formulario
+
+            this.FormClosing += (sender, e) =>
+            {
+                Application.Exit();
+            };
             CargarCitasAdmin();
             CargarComboBoxes();
             CargarClientesYVehiculos();
@@ -74,6 +79,11 @@ namespace tdsv121_dae_final
             {
                 MessageBox.Show("Error al cargar los selectores: " + ex.Message);
             }
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
         private void CargarCitasAdmin()
         {
@@ -467,7 +477,7 @@ namespace tdsv121_dae_final
                 this.Hide();
 
                 // Le pasamos un nuevo LoginForm() para satisfacer el parámetro que exige su constructor
-                RegistrationForm regForm = new RegistrationForm(new LoginForm());
+                RegistrationForm regForm = new RegistrationForm(this);
 
                 // ShowDialog hace que el programa espere a que cierren la ventana de registro
                 regForm.ShowDialog();

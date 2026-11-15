@@ -24,8 +24,18 @@ namespace tdsv121_dae_final
                 Location = new Point(30, 40)
             };
 
+            this.FormClosing += (sender, e) =>
+            {
+                Application.Exit();
+            };
+
             registerAppointmentButton.Click += RegisterAppointmentButton_Click;
             Controls.Add(registerAppointmentButton);
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void RegisterAppointmentButton_Click(object? sender, EventArgs e)

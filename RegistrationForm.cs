@@ -15,14 +15,14 @@ namespace tdsv121_dae_final
     public partial class RegistrationForm : Form
     {
 
-        private LoginForm previousLoginForm;
+        private Form previousLoginForm;
 
         private Ctrl controller = new Ctrl();
 
-        public RegistrationForm(LoginForm loginForm)
+        public RegistrationForm(Form form)
         {
             InitializeComponent();
-            previousLoginForm = loginForm;
+            previousLoginForm = form;
             LoadData();
         }
 
