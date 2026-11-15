@@ -17,7 +17,10 @@ namespace tdsv121_dae_final.Connection
         {
             USERS,
             ROLES,
-            CREDS
+            CREDS,
+            APPOINTMENTS, 
+            CARS,        
+            CUSTOMERS
         }
         public DataTable LoadData(Tables table)
         {
@@ -44,6 +47,12 @@ namespace tdsv121_dae_final.Connection
                     return "roles";
                 case Tables.CREDS:
                     return "credentials";
+                case Tables.APPOINTMENTS:
+                    return "appointments";
+                case Tables.CARS:         
+                    return "cars";
+                case Tables.CUSTOMERS:    
+                    return "customers";
                 default:
                     Console.WriteLine("Data Table not mapped - name not found");
                     return "invalid_table";
