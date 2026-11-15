@@ -18,7 +18,6 @@ namespace tdsv121_dae_final
 
         private void InitializeComponent()
         {
-            label1 = new Label();
             lblUsuario = new Label();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
@@ -69,16 +68,6 @@ namespace tdsv121_dae_final
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(129, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Panel de administrador";
             // 
             // lblUsuario
             // 
@@ -522,11 +511,10 @@ namespace tdsv121_dae_final
             Controls.Add(button1);
             Controls.Add(tabControl1);
             Controls.Add(lblUsuario);
-            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "AdminForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "AdminForm";
+            Text = "Administra Citas";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
@@ -540,8 +528,6 @@ namespace tdsv121_dae_final
         }
 
         #endregion
-
-        private Label label1;
         private Label lblUsuario;
         private TabControl tabControl1;
         private TabPage tabPage1;
