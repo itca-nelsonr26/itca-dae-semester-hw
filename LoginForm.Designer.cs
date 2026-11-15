@@ -17,10 +17,13 @@ namespace tdsv121_dae_final
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             txtUsernameField = new TextBox();
             btn_register = new Button();
             btn_login = new Button();
             msk_password = new MaskedTextBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // txtUsernameField
@@ -30,7 +33,7 @@ namespace tdsv121_dae_final
             txtUsernameField.CharacterCasing = CharacterCasing.Lower;
             txtUsernameField.Font = new Font("Segoe UI", 12F);
             txtUsernameField.ForeColor = Color.White;
-            txtUsernameField.Location = new Point(92, 220);
+            txtUsernameField.Location = new Point(92, 265);
             txtUsernameField.Name = "txtUsernameField";
             txtUsernameField.Size = new Size(224, 29);
             txtUsernameField.TabIndex = 0;
@@ -44,7 +47,7 @@ namespace tdsv121_dae_final
             btn_register.FlatStyle = FlatStyle.Flat;
             btn_register.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btn_register.ForeColor = Color.White;
-            btn_register.Location = new Point(92, 340);
+            btn_register.Location = new Point(92, 371);
             btn_register.Name = "btn_register";
             btn_register.Size = new Size(100, 38);
             btn_register.TabIndex = 2;
@@ -60,7 +63,7 @@ namespace tdsv121_dae_final
             btn_login.FlatStyle = FlatStyle.Flat;
             btn_login.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btn_login.ForeColor = Color.White;
-            btn_login.Location = new Point(216, 340);
+            btn_login.Location = new Point(216, 371);
             btn_login.Name = "btn_login";
             btn_login.Size = new Size(100, 38);
             btn_login.TabIndex = 3;
@@ -74,12 +77,22 @@ namespace tdsv121_dae_final
             msk_password.BorderStyle = BorderStyle.FixedSingle;
             msk_password.Font = new Font("Segoe UI", 12F);
             msk_password.ForeColor = Color.White;
-            msk_password.Location = new Point(92, 280);
+            msk_password.Location = new Point(92, 317);
             msk_password.Name = "msk_password";
             msk_password.PasswordChar = '*';
             msk_password.Size = new Size(224, 29);
             msk_password.TabIndex = 1;
             msk_password.TextAlign = HorizontalAlignment.Center;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(2, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(407, 247);
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
@@ -87,6 +100,7 @@ namespace tdsv121_dae_final
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(15, 23, 42);
             ClientSize = new Size(408, 469);
+            Controls.Add(pictureBox1);
             Controls.Add(msk_password);
             Controls.Add(btn_login);
             Controls.Add(btn_register);
@@ -95,6 +109,7 @@ namespace tdsv121_dae_final
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TDSV121 - Sistema de acceso";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -105,5 +120,6 @@ namespace tdsv121_dae_final
         private Button btn_register;
         private Button btn_login;
         private MaskedTextBox msk_password;
+        private PictureBox pictureBox1;
     }
 }
