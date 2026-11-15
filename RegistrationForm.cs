@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -35,7 +36,10 @@ namespace tdsv121_dae_final
         private void btn_register_Click(object sender, EventArgs e)
         {
             string userName = txt_username.Text;
-            string role = cb_rol.SelectedValue.ToString();
+            //string role = cb_rol.SelectedValue.ToString();
+
+           
+            string role = "1";
             string firstName = txt_firstname.Text;
             string lastName = txt_lastname.Text;
             string dui = txt_dui.Text;
